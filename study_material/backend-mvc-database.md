@@ -1,14 +1,5 @@
 # Backend-MVC-Database Part 18
 
-good job buat kalian yang dah sampai week 3, di stage ini kalian udah belajar dasar backend dari week2 , dan udah mulai ngerti gimana cara data itu bekerja di belakang. Sekarang sudah saatnya kita menyimpan data menggunakan database dibanding sebelumnya yang menggunakan temporary json (di local kalian) .
-
-**kenapa database ?**
-
-karna pada umumnya di tech industry sudah hal yang lumrah kalau menyimpan data itu menggunakan database. database bisa membantu meminimalkan redudansi data. Redudansi sendiri merupakan terjadinya data-data ganda dalam berkas-berkas yang berbeda. 
-
-jadi di week3 ini sebenernya hampir mirip dengan week2 tugasnya, bedanya kita menggunakan database saja dalam hal meyimpan data. dan juga cara komunikasi model dengan table nya akan berbeda dibanding komunikasi ke json (menggunakan) fs.
-kita akan meggunakan database SQLite pada week ini, dan juga menggunakan SQlite Browser untuk monitoring database nya. dan terakhir di part akhir week3 kita akan belajar sedikit tentang API , dan cara membuat API pertama menggunakan framework node js untuk server backend yaitu Express js
-
 Langsung aja kita bakal mulai materi pertama yaitu fundamental database.
 
 **Apa itu Database ?**
