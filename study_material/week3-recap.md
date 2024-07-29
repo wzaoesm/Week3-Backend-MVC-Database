@@ -3,7 +3,7 @@ Yo guys, kita lanjut lagi perjalanan phase 1 kita. gua bakal recap apa yang kali
 
 ini pake contoh repo nyomanaditia(yayaya) untuk jelasin point point backendnya. 
 
-# Gambar
+![image](https://github.com/user-attachments/assets/11c53e8d-506a-4c42-9c47-50c59b9f9916)
 
 overall struktur folder yang paling bagus seperti ini.
 flow backend yang rapih:
