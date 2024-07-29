@@ -8,7 +8,7 @@ Sama seperti address book sebelumnya, bedanya kita akan ubah sistemnya menjadi A
 ***Project Set Up***
 Struktur Project API Pertama kalian wajib seperti ini
 
-# Gambar
+![image](https://github.com/user-attachments/assets/b9d98bfa-732a-431c-ba24-3bc5e09c45e3)
 
 Handling logic akan terpisah sesuai route yang di hit oleh request, jadi kita menggunakan callback function untuk memanggil controller di router kita. 
 
