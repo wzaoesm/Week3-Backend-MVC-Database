@@ -19,8 +19,7 @@ Cara Menggunakan Express.js untuk Membuat API Backend: Berikut adalah langkah-la
 
 1. <span style="color:red">Inisialisasi Project</span>: Pertama, Kalian perlu membuat proyek Node.js . Kalian dapat melakukannya dengan menjalankan perintah `npm init -y` dalam direktori proyek Kalian dan akan muncul file package.json.
 
-![alt text](asset/image.png)
-
+![image](https://github.com/user-attachments/assets/0b5bc161-44b9-4e45-b3ae-72395befe42a)
                                                 
 2. <span style="color:red">Mempersiapkan Project</span>: Buat folder src dan buat file Bernama `app.js`  Lalu install express dan nodemon dengan menjalankan perintah `npm install express nodemon` Sehingga tampilan schema folder seperti ini
 
@@ -89,7 +88,8 @@ app.listen(port, () => {
 
 lalu menjalankan perintah `npm run dev` di terminal maka akan menjalankan code di `src/index.js` dan menghasilkan seperti di bawah.
 
-![alt text](asset/image3.png)
+![image](https://github.com/user-attachments/assets/78980379-050e-4a33-b1be-d8173a4d2ba9)
+
 
 🎖️ <em><strong>Selamat telah menjalankan code express pertamamu </strong></em>🎖️
 
@@ -264,7 +264,7 @@ Langkah selanjutnya kita akan mencoba RESTapi yang telah kita buat menggunakan p
 ### POST
 untuk mencoba `API POST` maka ubah tipe pada postman ke POST seperti di gambar
 
-![alt text](asset/image4.png)
+![image](https://github.com/user-attachments/assets/be1a3211-ecc4-466d-92a7-6c3632e82041)
 
 route yang di gunakan adalah `http://localhost:3000/absences` dan mengirimkan data di body dalam bentuk raw json seperti ini
 
@@ -276,7 +276,7 @@ route yang di gunakan adalah `http://localhost:3000/absences` dan mengirimkan da
 
 lalu kita send data tersebut ke API kita makan akan membuat hasil seperti ini
 
-![alt text](asset/image2.png)
+![image](https://github.com/user-attachments/assets/e5e3a9f2-dffd-4ba8-9e09-a4636a78cb0b)
 
 ### GET
 untuk mencoba `API GET` maka ubah tipe pada postman ke GET. route yang di gunakan adalah `http://localhost:3000/absences` maka akan memunculkan data2 yang telah kita input menggunakan `API POST` seperti ini
@@ -296,7 +296,7 @@ untuk mencoba `API GET` maka ubah tipe pada postman ke GET. route yang di gunaka
 
 hasil di postman akan seperti ini
 
-![alt text](asset/image5.png)
+![image](https://github.com/user-attachments/assets/feb84a2e-64d4-46b6-b0cf-fce83a9ae255)
 
 dia akan memberikan data di response
 
@@ -328,7 +328,7 @@ maka akan menghasilkan pada response seperti ini
 ```
 jika di lihat dari postman akan seperti ini
 
-![alt text](asset/image6.png)
+![image](https://github.com/user-attachments/assets/fee298dc-ec6c-49a2-9448-e19c1a3a6054)
 
 ### DELETE
 
