@@ -47,4 +47,4 @@ Perhatikan bahwa ini hanya salah satu contoh penggunaan API dengan Node.js, dan 
 
 setelah kalian jalankan codenya, kalian bisa liat log hasil response data API yugi 
 
-# Gambar
+![image](https://github.com/user-attachments/assets/4f4b9096-e42b-4673-a1e6-9880bc935f5f)
