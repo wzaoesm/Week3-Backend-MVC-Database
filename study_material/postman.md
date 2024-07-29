@@ -33,7 +33,7 @@ Postman adalah alat yang digunakan untuk mengembangkan, menguji, dan mendokument
 - Monitor: Menjadwalkan dan menjalankan pengujian otomatis.
 - Mock Servers: Membuat server tiruan.
 
-# Gambar Postman
+![image](https://github.com/user-attachments/assets/73764584-0829-4a52-a3d1-a03ce2cb9f3d)
 
 **2. Komponen Permintaan**
 - Method Dropdown: Pilih metode HTTP seperti GET, POST, PUT, DELETE.
@@ -45,7 +45,8 @@ Postman adalah alat yang digunakan untuk mengembangkan, menguji, dan mendokument
 - Pre-request Script: Menulis skrip yang dijalankan sebelum permintaan dikirim.
 - Tests: Menulis skrip untuk memvalidasi respons API.
 
-# Gambar req postman
+![image](https://github.com/user-attachments/assets/51fcf298-6c95-4e65-aa07-8365173e077a)
+
 
 ## 4. Bekerja dengan Postman
 
