@@ -1,4 +1,4 @@
-# SQLite Part 20
+# SQLite
 **SQLite** adalah sistem manajemen basis data (Database Management System - DBMS) yang berbasis file. Ini adalah salah satu jenis database yang sangat ringan dan relatif sederhana yang menghilangkan kebutuhan akan server basis data yang terpisah. SQLite digunakan secara luas dalam aplikasi desktop, perangkat mobile, dan bahkan dalam pengembangan web untuk mengelola dan menyimpan data.
 
 **Kenapa Kita Pakai SQLite:**
