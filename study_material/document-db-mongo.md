@@ -108,3 +108,169 @@ Dan kemudian dokumen komentar terpisah:
 Dalam contoh ini, dokumen pengguna memiliki referensi (IDs) ke dokumen komentar terkait.
 
 Pilihan antara penanaman dan referensi tergantung pada kasus penggunaan Kalian dan seberapa sering Kalian harus mengakses atau memodifikasi data. Kalian harus mempertimbangkan struktur data dan kebutuhan akses data Kalian ketika merancang basis data MongoDB Kalian. 
+
+## Study Kasus
+
+Deskripsi Kasus:
+
+Anda bekerja di sebuah perusahaan yang menggunakan MongoDB untuk menyimpan data karyawan. Data karyawan memiliki beberapa atribut seperti ID, nama, jabatan, dan gaji. Anda diminta untuk mengelola dan melakukan query pada data karyawan tersebut.
+
+**Skema Data Karyawan:**
+```json
+{
+  "_id": ObjectId("..."),
+  "id_karyawan": "K001",
+  "nama": "Budi Santoso",
+  "jabatan": "Software Engineer",
+  "gaji": 8000000,
+  "tanggal_masuk": ISODate("2022-01-15T00:00:00Z")
+}
+```
+
+**Contoh Data**
+
+Misalkan kita memiliki koleksi `karyawan` dengan data berikut:
+```json
+[
+  {
+    "_id": ObjectId("64a9e8c3b11b75d4b0f9b7b8"),
+    "id_karyawan": "K001",
+    "nama": "Budi Santoso",
+    "jabatan": "Software Engineer",
+    "gaji": 8000000,
+    "tanggal_masuk": ISODate("2022-01-15T00:00:00Z")
+  },
+  {
+    "_id": ObjectId("64a9e8c3b11b75d4b0f9b7b9"),
+    "id_karyawan": "K002",
+    "nama": "Siti Nurhaliza",
+    "jabatan": "Data Scientist",
+    "gaji": 8500000,
+    "tanggal_masuk": ISODate("2021-06-01T00:00:00Z")
+  },
+  {
+    "_id": ObjectId("64a9e8c3b11b75d4b0f9b7ba"),
+    "id_karyawan": "K003",
+    "nama": "Andi Wijaya",
+    "jabatan": "UX Designer",
+    "gaji": 7500000,
+    "tanggal_masuk": ISODate("2023-03-20T00:00:00Z")
+  }
+]
+```
+
+### Contoh Query dan Output
+
+1. **Menampilkan Semua Karyawan**:
+
+**Query:**
+```js
+db.karyawan.find().pretty()
+```
+
+**Output**
+```json
+[
+  {
+    "_id": ObjectId("64a9e8c3b11b75d4b0f9b7b8"),
+    "id_karyawan": "K001",
+    "nama": "Budi Santoso",
+    "jabatan": "Software Engineer",
+    "gaji": 8000000,
+    "tanggal_masuk": ISODate("2022-01-15T00:00:00Z")
+  },
+  {
+    "_id": ObjectId("64a9e8c3b11b75d4b0f9b7b9"),
+    "id_karyawan": "K002",
+    "nama": "Siti Nurhaliza",
+    "jabatan": "Data Scientist",
+    "gaji": 8500000,
+    "tanggal_masuk": ISODate("2021-06-01T00:00:00Z")
+  },
+  {
+    "_id": ObjectId("64a9e8c3b11b75d4b0f9b7ba"),
+    "id_karyawan": "K003",
+    "nama": "Andi Wijaya",
+    "jabatan": "UX Designer",
+    "gaji": 7500000,
+    "tanggal_masuk": ISODate("2023-03-20T00:00:00Z")
+  }
+]
+```
+
+2. **Mencari Karyawan Berdasarkan Jabatan**:
+
+**Query:**
+```js
+db.karyawan.find({ jabatan: "Data Scientist" }).pretty()
+```
+
+**Output**
+```json
+{
+  "_id": ObjectId("64a9e8c3b11b75d4b0f9b7b9"),
+  "id_karyawan": "K002",
+  "nama": "Siti Nurhaliza",
+  "jabatan": "Data Scientist",
+  "gaji": 8500000,
+  "tanggal_masuk": ISODate("2021-06-01T00:00:00Z")
+}
+```
+
+3. **Mencari Karyawan dengan Gaji Lebih dari 8000000**:
+
+**Query:**
+```js
+db.karyawan.find({ gaji: { $gt: 8000000 } }).pretty()
+```
+
+**Output**
+```json
+{
+  "_id": ObjectId("64a9e8c3b11b75d4b0f9b7b9"),
+  "id_karyawan": "K002",
+  "nama": "Siti Nurhaliza",
+  "jabatan": "Data Scientist",
+  "gaji": 8500000,
+  "tanggal_masuk": ISODate("2021-06-01T00:00:00Z")
+}
+```
+
+4. **Mengupdate Gaji Karyawan Berdasarkan ID**:
+
+**Query:**
+```js
+db.karyawan.updateOne(
+  { id_karyawan: "K003" },
+  { $set: { gaji: 7800000 } }
+)
+
+```
+
+**Output**
+```json
+{
+  "_id": ObjectId("64a9e8c3b11b75d4b0f9b7ba"),
+  "id_karyawan": "K003",
+  "nama": "Andi Wijaya",
+  "jabatan": "UX Designer",
+  "gaji": 7800000,
+  "tanggal_masuk": ISODate("2023-03-20T00:00:00Z")
+}
+```
+
+5. **Menghapus Karyawan Berdasarkan ID**:
+
+**Query:**
+```js
+db.karyawan.deleteOne({ id_karyawan: "K001" })
+```
+
+**Output**
+```json
+{
+  "acknowledged": true,
+  "deletedCount": 1
+}
+```
+Ini adalah beberapa contoh query dan operasi yang bisa dilakukan pada koleksi `karyawan` di MongoDB
