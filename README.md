@@ -16,7 +16,6 @@ kita akan meggunakan database SQLite pada week ini, dan juga menggunakan SQlite 
 - [Document Database MongoDB](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/document-db-mongo.md)
 - [NoSQL Query Database MongoDb]()
 - [Cloud Database](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/cloud-database.md)
-- [Mongoose ODM](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/mongoose.md)
 - [SQLite](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/sqlite.md)
 - [Logic Nolep (Address Book) :exploding_head: ](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/logic_nolep/ln-address-book.md)
 - [API](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/API.md)
