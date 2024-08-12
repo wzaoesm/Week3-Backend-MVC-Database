@@ -1,5 +1,4 @@
-# Backend-MVC-Database Part 18
-
+# Backend-MVC-Database
 Langsung aja kita bakal mulai materi pertama yaitu fundamental database.
 
 **Apa itu Database ?**
