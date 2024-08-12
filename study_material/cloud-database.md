@@ -85,3 +85,51 @@ pilih tab connect maka kalian akan lihat credential database kalian
 ![image](https://github.com/user-attachments/assets/26402e1d-23d9-435d-9d60-bd815c5fd1e3)
 
 copy MYSQL_URL, itulah URL yang akan kalian pakai di week4 ini.
+
+## Supabase
+
+"Supabase" salah satu platform untuk cloud database yang bisa di gunakan secara geratis. database yang di gunakan merupakan bentuk SQL yang sama seperti MySQL, PostgreSQL. pada penggunaan geratis Supabase menawarkan fitur:
+
+- Unlimited API requests
+- 50,000 monthly active users
+- 500 MB database space
+- Shared CPU • 500 MB RAM
+- 5 GB bandwidth
+- 1 GB file storage
+- Community support
+
+Link nya disini: https://supabase.com/
+
+kalian bisa masuk menggunakan akun gmail atau akun Github kalian. setelah masuk kalian bisa membuat project DB kalian seperti ini
+
+![image](https://github.com/user-attachments/assets/c9519a54-891c-4f0e-a776-a66f066528ec)
+
+kalian akan di suruh untuk memasukan nama database, password, dan server (disarankan menggunakan server yang seregion dengan kalian)
+
+![image](https://github.com/user-attachments/assets/8fc38ac2-47b4-4d2b-bea4-970ff7ab29ac)
+
+setelah selesai membuat projet database kalian bisa langsung Connect database ke project kalian
+
+![image](https://github.com/user-attachments/assets/24f07f74-373a-4878-a024-43ddbbe75822)
+
+![image](https://github.com/user-attachments/assets/9413827e-6b49-466d-82e3-18d25eaf247c)
+
+## Neon
+
+"Neon" juga merupakan salah satu platform database berbentuk PostgreSQl yang menyediakan penggunaan geratis
+untuk penggunaan geratis menawarkan fitur berikut: 
+
+- 0.5 GiB storage
+- 24/7 for your main database 
+- Community support
+- Fixed capacity at 0.25 vCPU
+- Point-in-time restore (24 h)
+
+Kalian bisa masuk menggunakan akun Gmail atau Github kalian. setelah kalian masuk langsung buat project database kalian 
+
+![image](https://github.com/user-attachments/assets/46a4236a-b203-41a1-88ea-16ed4b5a2364)
+
+setelah project siap kalian bisa membuat branch baru untuk project kalian
+
+![image](https://github.com/user-attachments/assets/f83c901d-a3ba-40cc-a49a-ff70e22b985b)
+
