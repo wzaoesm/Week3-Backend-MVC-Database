@@ -18,6 +18,7 @@ kita akan meggunakan database SQLite pada week ini, dan juga menggunakan SQlite 
 - [Logic Nolep (Warehouse Management system NoSQL) :exploding_head:](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/logic_nolep/warehouse-system-nosql.md)
 - [Cloud Database](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/cloud-database.md)
 - [SQLite](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/sqlite.md)
+- [Mongoose](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/mongoose.md)
 - [Logic Nolep (Address Book) :exploding_head: ](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/logic_nolep/ln-address-book.md)
 - [API](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/API.md)
 - [Express JS](https://github.com/RPN-Phase-1/Week3-Backend-MVC-Database/blob/main/study_material/express.md)
