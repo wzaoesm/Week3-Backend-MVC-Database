@@ -1,4 +1,4 @@
-# Logic Nolep (Warehouse Management System)
+# Logic Nolep (Warehouse Management System SQL)
 Kali ini kalian akan diberi tugas untuk membuat Warehouse Database System. dan kalian harus mengikuti langhak2 dan syarat2 tertentu untuk 
 mengerjakan soal ini.
 
