@@ -109,7 +109,7 @@ Dalam contoh ini, dokumen pengguna memiliki referensi (IDs) ke dokumen komentar 
 
 Pilihan antara penanaman dan referensi tergantung pada kasus penggunaan Kalian dan seberapa sering Kalian harus mengakses atau memodifikasi data. Kalian harus mempertimbangkan struktur data dan kebutuhan akses data Kalian ketika merancang basis data MongoDB Kalian. 
 
-## Study Kasus
+## Studi Kasus
 
 Deskripsi Kasus:
 
