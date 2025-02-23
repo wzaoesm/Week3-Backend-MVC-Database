@@ -231,6 +231,3 @@ Untuk memeriksa dan mengelola basis data SQLite menggunakan SQLite Browser, Kali
 Setelah membuka basis data, Kalian akan dapat melihat skema tabel, menjalankan perintah SQL, dan mengeksekusi permintaan kueri untuk memeriksa isi basis data Kalian. Kalian juga dapat memanipulasi data jika diperlukan.
 
 Pastikan Kalian telah menjalankan kode JavaScript yang telah disediakan sebelumnya untuk membuat basis data dan mengisi data. Setelah itu, Kalian dapat membuka basis data dengan SQLite Browser untuk memeriksa isinya.
-
-***Explore***
-https://medium.com/@dimitri.wahyudiputra/implementasi-sqlite3-dengan-node-js-75cc63375fbf
