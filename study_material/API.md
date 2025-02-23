@@ -21,7 +21,7 @@ Berikut adalah beberapa konsep dasar terkait dengan API:
 
 API digunakan dalam berbagai konteks, termasuk pengembangan perangkat lunak, integrasi sistem, pengambilan data dari platform sosial media, dan banyak lagi. Mereka memungkinkan aplikasi untuk saling berinteraksi dan mengakses sumber daya eksternal dengan lebih efisien dan terstruktur.
 
-## CONTOH PENGGUNAAN API
+## CONTOH PENGGUNAAN API (REST API)
 Dalam contoh ini, kita akan menggunakan Node.js untuk membuat permintaan HTTP ke API publik yang mengembalikan data yugioh dengan kartu level 4 dan attribute air. Untuk melakukan ini, kita akan menggunakan modul axios untuk mengirim permintaan HTTP. Pastikan Kalian telah menginstal modul ini dengan menjalankan npm install axios sebelum mencoba contoh berikut.
 
 ```js
