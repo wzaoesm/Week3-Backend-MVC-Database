@@ -11,6 +11,6 @@ Kebutuhan:
 - menghitung keuntungan dari hasil menyelesaikan project (hanya manajer)
 
 Syarat Tugas:
-- Harus Membuat ER Diagram Databasenya
+- Harus Membuat Design Databasenya bisa (ERD, Class Diagram, atau tools design database yang lain)
 - buat query sql untuk mengimplementasikan kebutuhan di atas
 - jumlah tabel bebas, yang penting semua kebutuhannya terpenuhi
