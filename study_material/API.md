@@ -1,4 +1,4 @@
-# API Part 22
+# API
 API adalah singkatan dari Application Programming Interface. Secara sederhana, API adalah sekumpulan aturan dan protokol yang memungkinkan berbagai perangkat lunak atau aplikasi untuk berkomunikasi satu sama lain. API digunakan untuk mengizinkan berbagai komponen perangkat lunak berinteraksi dan bertukar data dengan cara yang terstruktur.
 
 Berikut adalah beberapa konsep dasar terkait dengan API:
