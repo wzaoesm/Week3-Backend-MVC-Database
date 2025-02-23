@@ -46,7 +46,7 @@ Gunakan indeks untuk mempercepat pencarian data, tetapi hati-hati dengan over-in
   - Optimalkan query dengan mempertimbangkan volume data
   - Hindari penggunaan tipe data yang tidak efisien
 
-## Contoh Study Kasus
+## Contoh Studi Kasus
 
 Mari kita ambil contoh untuk sistem manajemen perpustakaan sederhana.
 Studi Kasus: Sistem Manajemen Perpustakaan
