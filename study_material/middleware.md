@@ -22,9 +22,19 @@ Middleware dalam konteks API adalah perangkat lunak yang bertindak sebagai jemba
 
 10. **Caching**: Menyimpan response untuk mengurangi beban pada server dan mempercepat waktu respons untuk request yang sama.
 
-Middleware ini sering digunakan dalam framework seperti Express.js untuk Node.js, Flask untuk Python, atau Django untuk Python. Apakah ada jenis middleware tertentu yang ingin kamu ketahui lebih lanjut?
+11. **File Upload** (Multer): Menangani upload file (akan dijelaskan detail di bawah).
 
-## Contoh simple penggunaan Middleware
+## Contoh simple penggunaan Middleware (Multer)
+
+Multer adalah middleware Express.js untuk menangani data form multipart/form-data (umum digunakan untuk upload file).
+
+Fitur Utama Multer:
+
+- File Storage: Menyimpan file ke disk atau memori.
+
+- Custom Naming: Memberi nama unik untuk menghindari konflik.
+
+- File Filtering: Membatasi jenis file yang diizinkan.
 
 ### 1. Persiapan
 
@@ -288,4 +298,199 @@ Response Error:
 {
   "error": "No file uploaded"
 }
+```
+
+# Middleware untuk API
+
+Middleware dalam konteks API adalah perangkat lunak yang bertindak sebagai jembatan antara server dan aplikasi. Middleware memproses request dan response sebelum mencapai route handler atau setelah route handler mengirimkan response. Berikut penjelasan jenis middleware dan implementasi praktis:
+
+---
+
+## Daftar Middleware Umum
+1. **Authentication**: Memverifikasi identitas pengguna (e.g., token JWT/OAuth).
+2. **Authorization**: Memeriksa izin akses pengguna.
+3. **Logging**: Mencatat aktivitas request-response.
+4. **Error Handling**: Menangani kesalahan secara terpusat.
+5. **CORS**: Mengatur izin akses lintas domain.
+6. **Rate Limiting**: Membatasi frekuensi request.
+7. **File Upload (Multer)**: Menangani upload file (*akan dijelaskan detail di bawah*).
+
+---
+
+## Contoh Implementasi Middleware dengan Express.js
+
+### 1. Persiapan
+**Instal Package**:
+```bash
+npm install express sqlite3 multer
+```
+- `express`: Framework web server
+- `sqlite3`: Database sederhana
+- `multer`: **Middleware khusus untuk handle upload file** (*penjelasan lengkap di bagian akhir*)
+
+### 2. Struktur Proyek
+```
+project/
+├── index.js         # Entry point aplikasi
+├── db.js            # Konfigurasi database
+├── uploads/         # Folder penyimpanan file (dibuat otomatis)
+└── middlewares/     # Kumpulan middleware
+    ├── authMiddleware.js
+    ├── loggingMiddleware.js
+    └── ...
+```
+
+### 3. Konfigurasi Database (SQLite3)
+```js
+// db.js
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('./database.db');
+
+// Buat tabel karyawan jika belum ada
+db.serialize(() => {
+  db.run(`
+    CREATE TABLE IF NOT EXISTS karyawan (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      nama TEXT,
+      jabatan TEXT
+    )
+  `);
+});
+
+module.exports = db;
+```
+
+---
+
+## Penjelasan Library Multer dan Konfigurasi Storage
+**Multer** adalah middleware Express.js untuk menangani data form `multipart/form-data` (umum digunakan untuk upload file). 
+
+### Fitur Utama Multer:
+1. **File Storage**: Menyimpan file ke disk atau memori.
+2. **Custom Naming**: Memberi nama unik untuk menghindari konflik.
+3. **File Filtering**: Membatasi jenis file yang diizinkan.
+
+### Konfigurasi Storage di Backend
+Pada contoh kode di `index.js`, kami menggunakan **diskStorage** untuk menyimpan file ke folder `uploads/`:
+
+```js
+const multer = require('multer');
+const path = require('path');
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');  # File disimpan di folder 'uploads'
+  },
+  filename: (req, file, cb) => {
+    # Nama file: timestamp + ekstensi asli (e.g., '1627382821723-laporan.pdf')
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
+});
+
+const upload = multer({ storage });
+```
+
+**Penjelasan Parameter**:
+- `destination`: Fungsi untuk menentukan lokasi penyimpanan file.
+- `filename`: Fungsi untuk generate nama file unik.
+- `Date.now()`: Menjamin nama file unik dengan timestamp.
+- `path.extname()`: Mempertahankan ekstensi file asli.
+
+---
+
+### 4. Implementasi Middleware Lain
+**Contoh: Authentication Middleware**
+```js
+// middlewares/authMiddleware.js
+module.exports = (req, res, next) => {
+  const token = req.headers.authorization?.split(' ')[1];
+  if (token === 'valid-token') next();
+  else res.status(401).json({ error: 'Akses ditolak!' });
+};
+```
+
+**Contoh: Error Handling Middleware**
+```js
+// middlewares/errorHandlerMiddleware.js
+module.exports = (err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Terjadi kesalahan server!' });
+};
+```
+
+---
+
+## 5. Konfigurasi Express.js dengan Middleware
+```js
+// index.js
+const express = require('express');
+const upload = require('./config/multer');  # Impor konfigurasi Multer
+
+const app = express();
+
+// Terapkan middleware global
+app.use(express.json());
+app.use(authMiddleware);
+app.use(loggingMiddleware);
+
+// Route untuk upload file
+app.post('/upload', upload.single('file'), (req, res) => {
+  if (!req.file) throw new Error('File tidak ditemukan!');
+  res.json({ file: req.file });
+});
+
+// Terapkan error handler di akhir
+app.use(errorHandlerMiddleware);
+```
+
+---
+
+## 6. Testing API dengan Postman
+
+### Upload File:
+1. **Endpoint**: `POST /upload`
+2. **Body**: Pilih `form-data`
+3. **Key**: `file` (tipe `File`)
+4. **Pilih File**: Upload dari komputer
+
+**Contoh Response Sukses**:
+```json
+{
+  "file": {
+    "fieldname": "file",
+    "originalname": "laporan.pdf",
+    "filename": "1627382821723-laporan.pdf",
+    "path": "uploads/1627382821723-laporan.pdf"
+  }
+}
+```
+
+**Response Error**:
+```json
+{
+  "error": "File tidak ditemukan!"
+}
+```
+
+---
+
+## FAQ Tentang Multer & Storage
+**Q: Apa perbedaan memoryStorage vs diskStorage?**
+- `memoryStorage`: File disimpan di RAM (untuk pemrosesan lanjutan seperti upload ke cloud).
+- `diskStorage`: File disimpan di direktori server (untuk penyimpanan lokal).
+
+**Q: Bagaimana membatasi ukuran file?**
+Tambahkan `limits` pada konfigurasi Multer:
+```js
+const upload = multer({
+  storage,
+  limits: { fileSize: 5 * 1024 * 1024 }  # Maksimal 5MB
+});
+```
+
+**Q: Bagaimana cara menghapus file yang diupload?**
+Gunakan modul `fs` untuk menghapus file secara manual:
+```js
+const fs = require('fs');
+fs.unlinkSync('uploads/1627382821723-laporan.pdf');
 ```
