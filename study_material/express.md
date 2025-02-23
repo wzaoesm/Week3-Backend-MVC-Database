@@ -12,7 +12,7 @@ Express.js adalah kerangka kerja (framework) JavaScript yang berjalan di atas No
 
 4.	<span style="color:red">Ketersediaan Banyak Paket Pihak Ketiga</span>: Ada banyak paket pihak ketiga yang dapat Kalian integrasikan dengan Express.js untuk menambahkan fungsi khusus seperti otentikasi (contoh: Passport.js), validasi input (contoh: express-validator), dan lainnya.
 
-5.	<span style="color:red">Komunitas Besar</span>: Express.js memiliki komunitas yang besar, sehingga Kalian dapat dengan mudah menemukan sumber daya, tutorial, dan bantuan dari komunitas jika menghadapi masalah.
+5.	<span style="color:red">Komunitas Besar</span>: Express.js memiliki komunitas yang besar, sehingga Kalian dapat dengan mudah menemukan resource data, tutorial, dan bantuan dari komunitas jika menghadapi masalah.
 
 ## MEMULAI PROJECT EXPRESS
 Cara Menggunakan Express.js untuk Membuat API Backend: Berikut adalah langkah-langkah umum untuk membuat API backend menggunakan Express.js: 
@@ -98,7 +98,7 @@ lalu menjalankan perintah `npm run dev` di terminal maka akan menjalankan code d
 
 # HTTP Method
 
-HTTP Methods digunakan untuk menunjukkan tindakan yang ingin dilakukan klien API pada sumber daya tertentu. Setiap metode HTTP dipetakan ke operasi tertentu, seperti membuat, membaca, memperbarui, atau menghapus sumber daya, dan metode HTTP harus disertakan dengan setiap permintaan ke REST API.
+HTTP Methods digunakan untuk menunjukkan tindakan yang ingin dilakukan klien API pada resource data tertentu. Setiap metode HTTP dipetakan ke operasi tertentu, seperti membuat, membaca, memperbarui, atau menghapus resource data, dan metode HTTP harus disertakan dengan setiap permintaan ke REST API.
 
 ## Pendahuluan
 
@@ -110,15 +110,15 @@ Metode GET digunakan untuk meminta data dari server. Data yang diminta dikirimka
 
 ### POST
 
-Metode POST digunakan untuk mengirim data ke server untuk membuat atau memperbarui sumber daya. Data yang dikirimkan biasanya berada dalam body request.
+Metode POST digunakan untuk mengirim data ke server untuk membuat atau memperbarui resource data. Data yang dikirimkan biasanya berada dalam body request.
 
 ### PUT
 
-Metode PUT digunakan untuk memperbarui sumber daya yang ada pada server dengan data yang baru. Jika sumber daya belum ada, PUT biasanya akan membuat sumber daya tersebut.
+Metode PUT digunakan untuk memperbarui resource data yang ada pada server dengan data yang baru. Jika resource data belum ada, PUT biasanya akan membuat resource data tersebut.
 
 ### DELETE
 
-Metode DELETE digunakan untuk menghapus sumber daya dari server.
+Metode DELETE digunakan untuk menghapus resource data dari server.
 
 ## Contoh Penggunaan dengan Express.js
 
