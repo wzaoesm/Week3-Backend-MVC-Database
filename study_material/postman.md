@@ -17,12 +17,12 @@ Postman adalah alat yang digunakan untuk mengembangkan, menguji, dan mendokument
 ## 2. Menginstal dan Menyiapkan Postman
 
 **Instalasi**
-- Unduh Postman: Kunjungi situs resmi [Postman](https://www.postman.com/downloads/) dan unduh versi yang sesuai untuk sistem operasi Anda.
+- Unduh Postman: Kunjungi situs resmi [Postman](https://www.postman.com/downloads/) dan unduh versi yang sesuai untuk sistem operasi Kalian.
 - Instal: Ikuti petunjuk instalasi yang muncul.
 
 **Pengaturan Awal**
 - Setelah instalasi, buka Postman dan buat akun jika diperlukan.
-- Anda dapat memulai dengan membuat koleksi pertama Anda untuk mengorganisir permintaan.
+- Kalian dapat memulai dengan membuat koleksi pertama Kalian untuk mengorganisir permintaan.
 
 ## 3. Antarmuka Postman
 
@@ -136,7 +136,7 @@ pm.test("Status code is 200", function () {
 ## 7. Tips dan Trik
 - Gunakan Variabel Global dan Environment: Untuk membuat permintaan lebih dinamis dan mudah dipelihara.
 - Uji Respons API: Pastikan API berfungsi dengan benar dengan menggunakan skrip uji.
-- Dokumentasikan API Anda: Gunakan fitur dokumentasi untuk membuat dokumentasi yang berguna dan dapat diakses oleh tim.
+- Dokumentasikan API Kalian: Gunakan fitur dokumentasi untuk membuat dokumentasi yang berguna dan dapat diakses oleh tim.
 
 Disarankan untuk melihat video di youtube
 source: https://www.youtube.com/playlist?list=PLhW3qG5bs-L9P22XSnRe4suiWL4acXG-g
