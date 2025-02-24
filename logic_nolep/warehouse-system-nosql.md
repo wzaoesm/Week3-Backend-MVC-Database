@@ -44,7 +44,7 @@ Expected output:
 
 6. Perbarui harga 'Laptop' menjadi 1099,99.
 
-7. Tuliskan kueri untuk menghitung nilai total inventaris pada setiap gudang.
+7. Tuliskan query untuk menghitung nilai total inventaris pada setiap gudang.
 
 Output yang diharapkan (setelah pembaruan harga pada pertanyaan 6):
 ```json
@@ -86,6 +86,6 @@ Expected output:
 ]
 ```
 
-10. Tulis kueri untuk mencari produk yang belum pernah dipesan.
+10. Tulis query untuk mencari produk yang belum pernah dipesan.
   
 
